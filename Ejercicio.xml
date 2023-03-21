@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<peliculas>
+  <pelicula>
+    <titulo año="1972">El Padrino</titulo>
+    <director fechaNacimiento="07/04/1939">Francis Ford Coppola</director>
+    <anio>1972</anio>
+  </pelicula>
+  <pelicula>
+    <titulo año="2016">La La Land</titulo>
+    <director fechaNacimiento="19/01/1985">Damien Chazelle</director>
+    <anio>2016</anio>
+  </pelicula>
+  <pelicula>
+    <titulo año="1999">El Club de la Pelea</titulo>
+    <director fechaNacimiento="28/03/1962">David Fincher</director>
+    <anio>1999</anio>
+  </pelicula>
+</peliculas>
