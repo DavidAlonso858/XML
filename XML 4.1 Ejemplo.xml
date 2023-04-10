@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Colocamos un DTD interno-->
+<!DOCTYPE viaje [
+    <!ELEMENT viaje (saludo, nombre, inicio, fin, origen, destino+, precio)>
+    <!ELEMENT saludo (#PCDATA)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT inicio (#PCDATA)>
+    <!ELEMENT fin (#PCDATA)>
+    <!ELEMENT origen (#PCDATA)>
+    <!ELEMENT destino (ciudad, hotel, noches)>
+        <!ATTLIST destino id ID #REQUIRED>
+    <!ELEMENT ciudad (#PCDATA)>
+    <!ELEMENT hotel (#PCDATA)>
+    <!ELEMENT noches (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>
+
+]>
+
+<viaje>
+    <saludo>
+        <![CDATA[<h1>Buenos Días</h1>]]>
+    </saludo>
+    <nombre>David Alonso García</nombre>
+    <inicio>20/01/2023</inicio>
+    <fin>28/01/2023</fin>
+    <origen>Malaga</origen>
+
+    <destino id="DS"><!-- Esto es un atributo-->
+        <ciudad>Madrid</ciudad>
+        <hotel>Eustaquio</hotel>
+        <noches>4</noches>
+    </destino>
+    <destino id="DX"><!-- Esto es un atributo-->
+        <ciudad>Tokyo</ciudad>
+        <hotel>Nagata</hotel>
+        <noches>4</noches>
+    </destino>
+
+
+    <precio>780€</precio>
+
+</viaje>

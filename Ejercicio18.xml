@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Documento XML que represente un billete de avion 
+    sin atributos, solo elementos-->
+<!DOCTYPE viaje [
+    <!ENTITY nombre "David Alonso García">
+    <!ELEMENT viaje (pasajero, aeropuertori, aeropuertdest, fecha, hora)>
+    <!ELEMENT pasajero (#PCDATA)>
+    <!ELEMENT aeropuertori (#PCDATA)>
+    <!ELEMENT aeropuertdest (#PCDATA)>
+    <!ELEMENT fecha (#PCDATA)>
+    <!ELEMENT hora (#PCDATA)>
+]>
+
+<viaje>
+    <pasajero>&nombre;</pasajero>
+    <aeropuertori>Barajas</aeropuertori>
+    <aeropuertdest>Costacaba</aeropuertdest>
+    <fecha>20/08/2024</fecha>
+    <hora>15:03</hora>
+
+</viaje>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Documento XMl sobre una factura 
+    con distintos usos de los atributos-->
+<!DOCTYPE factura [
+    <!ENTITY num "1">
+    <!ENTITY nom "David Alonso García">
+    <!ELEMENT factura (numero, fecha, nombre, direccion, productos, 
+    unidades, precioUnitario, subtotal, IVA, total)>
+    <!ELEMENT numero (#PCDATA)>
+    <!ELEMENT fecha (#PCDATA)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT direccion (#PCDATA)>
+    <!ELEMENT productos (alcachofa, guisantes, vino, cacahuetes)>
+        <!ATTLIST alcachofa precio (20euros | 30euros | 15eruos) #REQUIRED>
+        <!ATTLIST cacahuetes precio (20euros | 30euros | 15eruos) #REQUIRED>
+        <!ATTLIST vino precio (20euros | 30euros | 15euros) "15euros">
+        <!ATTLIST guisantes precio (20euros | 30euros | 15eruos) #FIXED "20euros">
+    <!ELEMENT alcachofa (#PCDATA)>
+    <!ELEMENT guisantes (#PCDATA)>
+    <!ELEMENT cacahuetes (#PCDATA)>
+    <!ELEMENT vino (#PCDATA)>
+    <!ELEMENT unidades (#PCDATA)>
+    <!ELEMENT precioUnitario (#PCDATA)>
+    <!ELEMENT subtotal (#PCDATA)>
+    <!ELEMENT IVA (#PCDATA)>
+    <!ELEMENT total (#PCDATA)>
+]>
+<factura xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="prueba.xsd">
+
+    
+    <numero>&num;</numero>
+    <fecha>04/02/2023</fecha>
+    <nombre>&nom;</nombre>
+    <direccion>C/Gallito</direccion>
+    <productos> <!-- tiene que estar en el mismo orden que en el DTD-->
+        <alcachofa precio="30euros">verdes</alcachofa>
+        <guisantes>redondos</guisantes>
+        <vino>fuerte</vino>
+        <cacahuetes precio="30euros">marrones</cacahuetes>
+    </productos>
+    <unidades>cinco</unidades>
+    <precioUnitario></precioUnitario>
+    <subtotal>400€</subtotal>
+    <IVA>20%</IVA>
+    <total>500€</total>
+
+</factura>

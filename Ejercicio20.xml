@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Documento XML que representa un pedido de hamburguesería,
+     incluye atributos que contengan los productos-->
+<!DOCTYPE pedido [
+    <!ENTITY nombre "David Alonso García">
+    <!ELEMENT pedido (cliente, direccion, productos, precio)>
+    <!ELEMENT cliente (#PCDATA)>
+    <!ELEMENT direccion (#PCDATA)>
+    <!ELEMENT productos (carne, pan, ketchup, lechuga)>
+        <!ATTLIST carne cantidad CDATA "">
+        <!ATTLIST pan cantidad CDATA "">
+        <!ATTLIST ketchup cantidad CDATA "">
+        <!ATTLIST lechuga cantidad CDATA "">
+    <!ELEMENT carne (#PCDATA)>
+    <!ELEMENT pan (#PCDATA)>
+    <!ELEMENT ketchup (#PCDATA)>
+    <!ELEMENT lechuga (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>
+]>
+<pedido>
+    <cliente>&nombre;</cliente>
+    <direccion>C/Gallito</direccion>
+    <productos>
+        <carne cantidad="2kg">ternera</carne>
+        <pan cantidad="4 piezas">integral</pan>
+        <ketchup cantidad="200gr">picante</ketchup>
+        <lechuga cantidad="50gr">fina</lechuga>
+    </productos>
+    <precio>20€</precio>
+</pedido>
